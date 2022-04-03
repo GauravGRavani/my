@@ -1,6 +1,7 @@
 import requests
 from stem import Signal
 from stem.control import Controller
+import time
 
 
 def get_tor_session():
@@ -10,7 +11,8 @@ def get_tor_session():
     'https': 'socks5://127.0.0.1:9050'
    }
 
-   print(requests.get('http://httpbin.org/ip', proxies=proxies).text)
+   v = requests.get('http://httpbin.org/ip', proxies=proxies)
+   print(v.text)
 #session = get_tor_session()
 
  #signal TOR for a new connection 
