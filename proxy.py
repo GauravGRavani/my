@@ -1,1 +1,4 @@
-This is python proxy file.
+import requests
+
+get = requests.get(https://httpbin.org/ip)
+get.text
