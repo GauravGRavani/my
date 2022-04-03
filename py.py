@@ -10,7 +10,7 @@ def get_tor_session():
     'https': 'socks5://127.0.0.1:9050'
    }
 
-   requests.get('http://httpbin.org/ip', proxies=proxies).text
+   print(requests.get('http://httpbin.org/ip', proxies=proxies).text)
 #session = get_tor_session()
 
  #signal TOR for a new connection 
