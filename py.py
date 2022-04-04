@@ -10,8 +10,11 @@ def get_tor_session():
     'http': 'socks5://127.0.0.1:9050',
     'https': 'socks5://127.0.0.1:9050'
    }
+    
 
-   v = requests.get('http://httpbin.org/ip', proxies=proxies)
+    headers = {}
+ 
+   v = requests.get('http://httpbin.org/ip', proxies=proxies,headers=headers)
    print(v.text)
 #session = get_tor_session()
 
