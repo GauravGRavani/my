@@ -1,5 +1,7 @@
-from selenium import webdriver
-driver = webdriver.Firefox()
-driver.get("https://dev.to")
- 
-driver.find_element_by_id("nav-search").send_keys("Selenium")
+from selenium import webdriver  
+from selenium.webdriver.firefox.firefox\_binary import FirefoxBinary  
+binary = FirefoxBinary('/home/kali/Desktop')  
+driver = webdriver.Firefox(firefox\_binary=binary)  
+driver.get('https://www.lifeofpentester.blogspot.com')
+# insert time.sleep() here  
+driver.close()
